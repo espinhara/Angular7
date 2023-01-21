@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular7"
+    }
+  },
+  "defaultProject": "Angular7",
+  "cli": {
+    "analytics": "b1a5c4ca-badb-4940-bcef-7050d167a07b"
+  }
 }

@@ -1,0 +1,74 @@
+<form #form="ngForm" autocomplete="off">
+    <div class="form-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <input  
+                name="CardOwnerName" 
+                #CardOwnerName="ngModel" 
+                [(ngModel)]="service.CardOwnerName"
+                placeholder="Card Owner Name" 
+                class="form-control"
+                required
+            >
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+                <i class="fas fa-credit-card"></i>
+            </div>
+            <input  
+                name="CardNumber" 
+                #CardNumber="ngModel" 
+                [(ngModel)]="service.CardNumber"
+                placeholder="16 Card Number" 
+                class="form-control"
+                required
+                maxlength="16"
+                minlength="16"
+            >
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-7">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <input  
+                    name="ExpirationDate" 
+                    #ExpirationDate="ngModel" 
+                    [(ngModel)]="service.ExpirationDate"
+                    placeholder="MM/YY" 
+                    class="form-control"
+                    required
+                    maxlength="5"
+                    minlength="5"
+                >
+            </div>
+        </div>
+        <div class="form-group col-md-5">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-key"></i>
+                </div>
+                <input
+                    type="password"  
+                    name="CW" 
+                    #CW="ngModel" 
+                    [(ngModel)]="service.CW"
+                    placeholder="CW" 
+                    class="form-control"
+                    required
+                    maxlength="3"
+                    minlength="3"
+                >
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" type="submit"><i class="fas fa-database"></i> Submit</button>
+    </div>
+</form>
